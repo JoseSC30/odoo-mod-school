@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pruebamjp.estudiante_index">
+      <field name="name">gestion estudiante list</field>
+      <field name="model">pruebamjp.estudiante</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="nombre" />
+          <field name="apellido" />
+          <field name="edad" />
+         
+        
+          
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="pruebamjp.estudiante_create" model="ir.ui.view">
+      <field name="name">pruebamjp.estudiante.form</field>
+      <field name="model">pruebamjp.estudiante</field>
+      <field name="arch" type="xml">
+        <form string="estudianteform">
+          <sheet>
+            <group>
+              <field name="nombre" />
+               <field name="apellido" />
+                <field name="edad" />
+                 <!-- <field name="estudiante_tutor"></field>  -->
+               
+             
+            </group>
+            <footer>
+
+            
+
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record> 
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_estudiante_window">
+      <!-- name es el texto que aparece al lado del nuevo  -->
+      <field name="name">ESTUDIANTES</field>
+      <field name="res_model">pruebamjp.estudiante</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- <record model="ir.actions.act_window" id="gestion.action_materia_window">
+      <field name="name">Materias</field>
+      <field name="res_model">gestion.materia</field>
+     
+     <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="gestion.materia_create"/>
+      <field name="view_id" ref="gestion.materia_index"/>
+
+      </record> -->
+  </data>
+</odoo>

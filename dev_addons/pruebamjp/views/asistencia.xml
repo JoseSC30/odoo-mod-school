@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pruebamjp.asistencia_index">
+      <field name="name">pruebamjp asistencia list</field>
+      <field name="model">pruebamjp.asistencia</field>
+      <field name="arch" type="xml">
+
+        <tree>
+         <!--  <field name="nombre" />
+ -->     <field name="curso_materia_id"/>
+       
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+       <!-- Vista de Formulario -->
+    <record id="view_asistencia_form" model="ir.ui.view">
+    <field name="name">asistencia.form</field>
+    <field name="model">pruebamjp.asistencia</field>
+    <field name="arch" type="xml">
+        <form string="Asistencia">
+            <sheet>
+                <group>
+                    <field name="curso_materia_id"/>
+                    <field name="gestion_id" readonly="1"/>
+                    <field name="fecha"/>
+                </group>
+                <!-- <group>
+                    <button name="load_estudiantes" type="object" string="Cargar Estudiantes" class="oe_highlight"/>
+                </group> -->
+                <group string="Asistencias">
+                    <field name="asistencia_line_ids">
+                        <tree editable="bottom">
+                            <field name="estudiante_id"/>
+                            <field name="asistio"/>
+                        </tree>
+                    </field>
+                </group>
+            </sheet>
+        </form>
+    </field>
+     </record>
+
+
+<record id="pruebamjp.action_asistencia_window" model="ir.actions.act_window">
+    <field name="name">Registrar Asistencia</field>
+    <field name="res_model">pruebamjp.asistencia</field>
+    <field name="view_mode">tree,form</field>
+    
+</record> 
+
+
+  </data>
+</odoo>

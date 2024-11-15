@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="pruebamjp.estudiante_tutor_index">
+      <field name="name">pruebamjp estudiante_tutor list</field>
+      <field name="model">pruebamjp.estudiante_tutor</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="estudiante" />
+          
+          <field name="tutor" /> 
+
+        </tree>
+      </field>
+    </record>
+
+   
+     <record id="pruebamjp.estudiante_tutor" model="ir.ui.view">
+      <field name="name">pruebamjp.estudiante_tutor.form</field>
+      <field name="model">pruebamjp.estudiante_tutor</field>
+      <field name="arch" type="xml">
+        <form string="estudiante_tutorform">
+          
+            <group>
+                <field name="estudiante" />
+                
+
+                 <field name="tutor" />
+                  
+            </group>
+            
+        </form>
+      </field>
+    </record> 
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_estudiante_tutor_window">
+      
+      <field name="name">TUTORES DE LOS ESTUDIANTES</field>
+      <field name="res_model">pruebamjp.estudiante_tutor</field>
+      <field name="view_mode">tree,form</field>
+    </record> 
+
+  </data>
+</odoo>

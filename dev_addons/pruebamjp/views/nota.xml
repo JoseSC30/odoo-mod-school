@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pruebamjp.nota_index">
+      <field name="name">pruebamjp nota list</field>
+      <field name="model">pruebamjp.nota</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="nota" />
+         <!--  <field name="curso_nombre" />
+          <field name="curso_paralelo" /> -->
+
+        <!--   <field name="estudiante_nombre" />
+          <field name="materia_nombre" />
+          <field name="year" /> -->
+
+         
+        
+          
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="pruebamjp.nota_create" model="ir.ui.view">
+      <field name="name">pruebamjp.nota.form</field>
+      <field name="model">pruebamjp.nota</field>
+      <field name="arch" type="xml">
+        <form string="notaform">
+          <sheet>
+            <group>
+              <field name="nota" />
+               
+               <field name="noinscripcion_id" />
+               <field name="curso_materia_id" /> 
+                
+                
+                 <!-- <field name="estudiante_tutor"></field>  -->
+               
+             
+            </group>
+            <footer>
+
+            
+
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record> 
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_nota_window">
+      <!-- name es el texto que aparece al lado del nuevo  -->
+      <field name="name">NOTAS</field>
+      <field name="res_model">pruebamjp.nota</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    
+  </data>
+</odoo>

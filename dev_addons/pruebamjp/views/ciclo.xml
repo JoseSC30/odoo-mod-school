@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pruebamjp.ciclo_index">
+      <field name="name">gestion materia list</field>
+      <field name="model">pruebamjp.ciclo</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="nombre" />
+
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="pruebamjp.ciclo_create" model="ir.ui.view">
+      <field name="name">pruebamjp.ciclo.form</field>
+      <field name="model">pruebamjp.ciclo</field>
+      <field name="arch" type="xml">
+        <form string="cicloform">
+          <sheet>
+            <group>
+              <field name="nombre" />
+              
+            </group>
+            <footer>
+
+             
+
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_ciclo_window">
+      <!-- name es el texto que aparece al lado del nuevo  -->
+      <field name="name">CICLOS</field>
+      <field name="res_model">pruebamjp.ciclo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,68 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="pruebamjp.curso_materia_index">
+      <field name="name">pruebamjp curso_materia list</field>
+      <field name="model">pruebamjp.curso_materia</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="curso_id" />
+         <!--  <field name="curso_paralelo"></field> -->
+        
+          <field name="materia_id" />
+          <field name="profesor_id" />
+         <!--  <field name="ciclo_id" /> -->
+         <!--  <field name="hora_inicio" />
+          <field name="year" />  -->
+          </tree>
+      </field>
+    </record>
+
+   
+    <record id="pruebamjp.curso_materia_create" model="ir.ui.view">
+      <field name="name">pruebamjp.curso_materia.form</field>
+      <field name="model">pruebamjp.curso_materia</field>
+      <field name="arch" type="xml">
+        <form string="materiaform">
+          <sheet>
+            <group>
+              
+                <field name="curso_id" />
+                
+                
+                <field name="materia_id" />
+                
+                
+                <field name="profesor_id" /> 
+                
+                
+              <!--   <field name="ciclo_id" /> -->
+                
+                
+                <field name="horario_id" />
+                
+                
+                <field name="gestion_id" />
+                
+
+
+            </group>
+            <footer>
+
+            
+
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_curso_materia_window">
+      
+      <field name="name">MATERIAS DEL CURSO</field>
+      <field name="res_model">pruebamjp.curso_materia</field>
+      <field name="view_mode">tree,form</field>
+    </record> 
+
+  </data>
+</odoo>

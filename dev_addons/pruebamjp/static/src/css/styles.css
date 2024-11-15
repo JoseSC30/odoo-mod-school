@@ -1,0 +1,27 @@
+/* static/src/css/my_module_styles.css */
+.my_custom_button {
+    background-color:rgb(105, 43, 167);
+    color: white;
+    width: auto; /* Cambiado de 150px a auto */
+    min-width: 200px; 
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:50px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid rgb(113,59,168);
+    transition-duration: 0.4s;
+}
+
+
+.curso_id_custom_style {
+    /* Estilos personalizados */
+    background-color: #f2f2f2; /* Color de fondo */
+    border: 1px solid #dcdcdc; /* Borde del campo */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+}

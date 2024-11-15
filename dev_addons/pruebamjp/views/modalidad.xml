@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+     <record model="ir.ui.view" id="pruebamjp.modalidad_gestion_index">
+      <field name="name">pruebamjp modalidad_gestion list</field>
+      <field name="model">pruebamjp.modalidad_gestion</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="nombre" />
+          
+
+        </tree>
+      </field>
+    </record> 
+
+    <!-- Vista de Formulario -->
+     <record id="pruebamjp.modalidad_gestion_create" model="ir.ui.view">
+      <field name="name">pruebamjp gestion form</field>
+      <field name="model">pruebamjp.modalidad_gestion</field>
+      <field name="arch" type="xml">
+        <form string="modalidadgestionform">
+          <sheet>
+            <group>
+              <field name="nombre" />
+              
+            </group>
+            
+          </sheet>
+        </form>
+      </field>
+    </record> 
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_modalidad_gestion_window">
+      <!-- name es el texto que aparece al lado del nuevo  -->
+      <field name="name">PERIODOS ACADEMICOS</field>
+      <field name="res_model">pruebamjp.modalidad_gestion</field>
+      
+    </record>
+
+ 
+  </data>
+</odoo>

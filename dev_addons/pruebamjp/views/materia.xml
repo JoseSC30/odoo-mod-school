@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="pruebamjp.materia_index">
+      <field name="name">pruebamjp materia list</field>
+      <field name="model">pruebamjp.materia</field>
+      <field name="arch" type="xml">
+
+         <tree>
+          <field name="nombre" />
+
+        </tree>
+      </field>
+    </record>
+
+  
+    <record id="pruebamjp.materia_create" model="ir.ui.view">
+      <field name="name">pruebamjp.materia.form</field>
+      <field name="model">pruebamjp.materia</field>
+      <field name="arch" type="xml">
+        <form string="materiaform">
+          <sheet>
+            <group>
+                <field name="nombre" />
+                   
+              
+            </group>
+            <footer>
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_materia_window">
+     
+      <field name="name">MATERIAS</field>
+      <field name="res_model">pruebamjp.materia</field>
+      <field name="view_mode">tree,form</field>
+    </record> 
+
+  </data>
+</odoo> 

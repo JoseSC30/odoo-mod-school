@@ -1,0 +1,64 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pruebamjp.subnota_index">
+      <field name="name">pruebamjp subnota list</field>
+      <field name="model">pruebamjp.subnota</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="nota" />
+          <field name="curso_materia_id" />
+
+          <!--  <field name="estudiante_id" />
+          <field name="materia_nombre" />
+          <field name="year" />
+          <field name="numero"/> -->
+          <!-- <field name=""/> -->
+          <field name="numero" />
+          <field name="notafinal"/>
+          <field name="estudiante_nombre"/> 
+          <field name="year"/>
+          
+
+
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="pruebamjp.subnota_create" model="ir.ui.view">
+      <field name="name">pruebamjp.subnota.form</field>
+      <field name="model">pruebamjp.subnota</field>
+      <field name="arch" type="xml">
+        <form string="notaform">
+          <sheet>
+            <group>
+              <field name="nota" />
+
+              <field name="subinscripcion_id" />
+              <field name="curso_materia_id" />
+              <field name="numero" />
+              <field name="notafinal"/>
+              <!-- <field name="estudiante_tutor"></field>  -->
+
+
+            </group>
+            <footer>
+
+
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_subnota_window">
+      <!-- name es el texto que aparece al lado del nuevo  -->
+      <field name="name">subnotas</field>
+      <field name="res_model">pruebamjp.subnota</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  </data>
+</odoo>

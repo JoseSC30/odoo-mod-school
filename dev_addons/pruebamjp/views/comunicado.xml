@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="pruebamjp.comunicado_index">
+      <field name="name">pruebamjp comunicado list</field>
+      <field name="model">pruebamjp.comunicado</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="nombre" />
+          <field name="description" />
+          <field name="fecha" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="pruebamjp.comunicado_create" model="ir.ui.view">
+      <field name="name">pruebamjp.comunicado.form</field>
+      <field name="model">pruebamjp.comunicado</field>
+      <field name="arch" type="xml">
+        <form string="Comunicado Form">
+           
+            <group>
+            
+              <field name="nombre" />
+              <field name="description" />
+              <field name="fecha" />
+               <field name="comunicado_usuario_ids" />  
+                 
+               
+               
+            </group>
+            <group name="filtro" string="filtro para el curso">
+              
+            
+               
+           
+                    <field name="curso_id" class="curso_id_custom_style"></field>
+                   
+                  <button name="create_comunicado_for_all_users" string="Enviar a Todos" type="object" class="oe_highlight class  my_custom_button"/>
+                 <button name="create_comunicado_for_tutors_of_course" string="Enviar a Tutores del Curso" type="object" class="oe_highlight my_custom_button"/>
+           
+            </group>
+           
+          </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_comunicado_window">
+      <field name="name">COMUNICADOS</field>
+      <field name="res_model">pruebamjp.comunicado</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+   
+  </data>
+</odoo>

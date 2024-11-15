@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+     <record model="ir.ui.view" id="pruebamjp.horario_index">
+      <field name="name">pruebamjp horario list</field>
+      <field name="model">pruebamjp.horario</field>
+      <field name="arch" type="xml">
+
+        <tree>
+           <field name="hora_inicio" />
+          <field name="hora_fin" />
+          <field name="dia" />   
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="pruebamjp.horario_create" model="ir.ui.view">
+      <field name="name">pruebamjp.horario.form</field>
+      <field name="model">pruebamjp.horario</field>
+      <field name="arch" type="xml">
+        <form string="horarioform">
+          <sheet>
+            <group>
+                 
+                 <group name="fila1" string="hora inicio , la hora debe ser de 7 a 23 y los minutos de 0 a 59">
+                  <field name="hora_inicio" />
+                    <field name="minuto_inicio" /> 
+                 
+                 </group>
+                   <!-- <field name="dia" />  -->   
+                 
+                 
+            </group>
+                <group>
+                       <group name="fila1" string="hora fin">
+                            <field name="hora_fin"/>
+                            <field name="minuto_fin"/>
+                            <field name="dia"/>
+                              
+                            </group>
+                       
+                </group>            
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_horario_window">
+      <!-- name es el texto que aparece al lado del nuevo  -->
+      <field name="name">HORARIOS</field>
+      <field name="res_model">pruebamjp.horario</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

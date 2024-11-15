@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pruebamjp.gestion_index">
+      <field name="name">pruebamjp gestion list</field>
+      <field name="model">pruebamjp.gestion</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="year" />
+          <field name="fecha_inicio" />
+          <field name="fecha_fin" />    
+         
+
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="pruebamjp.gestion_create" model="ir.ui.view">
+      <field name="name">pruebamjp gestion form</field>
+      <field name="model">pruebamjp.gestion</field>
+      <field name="arch" type="xml">
+        <form string="gestionform">
+          <sheet>
+            <group>
+              <field name="year" />
+              <field name="fecha_inicio" />
+              <field name="fecha_fin" /> 
+              <field name="modalidad_gestion_id" />
+            </group>
+            <footer>
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_gestion_window">
+      <!-- name es el texto que aparece al lado del nuevo  -->
+      <field name="name">GESTIONES</field>
+      <field name="res_model">pruebamjp.gestion</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- <record model="ir.actions.act_window" id="gestion.action_materia_window">
+      <field name="name">Materias</field>
+      <field name="res_model">gestion.materia</field>
+     
+     <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="gestion.materia_create"/>
+      <field name="view_id" ref="gestion.materia_index"/>
+
+      </record> -->
+  </data>
+</odoo>

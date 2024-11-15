@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="pruebamjp.comunicado_usuario_index">
+      <field name="name">pruebamjp Comunicado Usuario list</field>
+      <field name="model">pruebamjp.comunicado_usuario</field>
+      <field name="arch" type="xml">
+
+        <tree>
+           <field name="tutor_usuario_info" /> 
+            <field name="usuario_recibe_id" />
+            <field name="comunicado_id" /> 
+            <!-- <field name="usuario_envia_id" />   -->
+
+        </tree>
+      </field>
+    </record>
+
+   
+      <record id="pruebamjp.comunicado_usuario" model="ir.ui.view">
+      <field name="name">pruebamjp.comunicado_usuario.form</field>
+      <field name="model">pruebamjp.comunicado_usuario</field>
+      <field name="arch" type="xml">
+        <form string="estudiante_tutorform">
+          
+            <group>
+                 <field name="usuario_recibe_id" />
+                <field name="tutor_usuario_info" readonly="1"/>
+                   
+               <!--  <field name="usuario_envia_id" /> -->
+
+                 
+                  
+            </group>
+            
+        </form>
+      </field>
+    </record>  
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_comunicado_usuario_window">
+      
+      <field name="name">COMUNICADOS PUBLICO</field>
+      <field name="res_model">pruebamjp.comunicado_usuario</field>
+      <field name="view_mode">tree,form</field>
+    </record> 
+
+  </data>
+</odoo>

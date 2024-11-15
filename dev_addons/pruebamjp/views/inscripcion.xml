@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="pruebamjp.inscripcion_index">
+      <field name="name">pruebamjp inscripcion list</field>
+      <field name="model">pruebamjp.inscripcion</field>
+      <field name="arch" type="xml">
+
+        <tree>
+            <field name="estudiante"/>  
+         <!--  <field name="estudiante_nombre" /> -->
+            <field name="curso" />
+             
+            <field name="gestion_id" />
+        </tree>
+      </field>
+    </record>
+
+   
+     <record id="pruebamjp.inscripcion" model="ir.ui.view">
+      <field name="name">pruebamjp.inscripcion.form</field>
+      <field name="model">pruebamjp.inscripcion</field>
+      <field name="arch" type="xml">
+        <form string="isncripcionform">
+          
+            <group>
+                <field name="estado"></field>
+                <field name="estudiante" />
+                 
+
+                 <field name="curso" />
+                 
+                   
+                <!--  <field name="curso_paralelo" /> -->
+
+                 <field name="gestion_id" />
+                 
+
+
+            </group>
+            
+        </form>
+      </field>
+    </record> 
+
+    <record model="ir.actions.act_window" id="pruebamjp.action_inscripcion_window">
+      
+      <field name="name">Inscripciones</field>
+      <field name="res_model">pruebamjp.inscripcion</field>
+      <field name="view_mode">tree,form</field>
+    </record> 
+
+  </data>
+</odoo>

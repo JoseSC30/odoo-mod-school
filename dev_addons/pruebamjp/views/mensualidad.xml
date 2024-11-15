@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="pruebamjp.mensualidad_index">
+      <field name="name">pruebamjp mensualidad list</field>
+      <field name="model">pruebamjp.mensualidad</field>
+      <field name="arch" type="xml">
+
+         <tree>
+           <field name="monto" />
+          <field name="fecha" />
+
+        </tree>
+      </field>
+    </record>
+
+  
+   <record model="ir.actions.act_window" id="pruebamjp.action_mensualidad_window">
+     
+      <field name="name">MENSUALIDADES</field>
+      <field name="res_model">pruebamjp.mensualidad</field>
+      <field name="view_mode">tree,form</field>
+    </record> 
+
+  </data>
+</odoo>  
+             
