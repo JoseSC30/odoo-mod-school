@@ -6,7 +6,7 @@
 
 1. Clonar el proyecto
  ```
-  https://github.com/Juan-Papi/odoo-docker.git
+  https://github.com/JoseSC30/odoo-mod-school
 
  ```
  ![alt text](image-2.png)
