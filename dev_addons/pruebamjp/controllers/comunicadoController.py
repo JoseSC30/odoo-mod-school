@@ -114,7 +114,7 @@ class ComunicadoController(http.Controller):
             comunicado_usuario_model = request.env['pruebamjp.comunicado_usuario']
             for usuario in usuarios:
                 comunicado_usuario_model.create({
-                    'visto': False,  # Asegúrate de que el campo 'visto' sea False por defecto
+                    'visto': True,  # Asegúrate de que el campo 'visto' sea False por defecto
                     'comunicado_id': comunicado.id,
                     'usuario_recibe_id': usuario.id,
                 })
